@@ -1,8 +1,5 @@
 <?php
-
-require 'vendor/autoload.php';
-
-$app = new \Slim\App;
+// Application middleware
 
 $app->add(new \Tuupola\Middleware\Cors([
 	'origin' => ['*'],
@@ -12,5 +9,3 @@ $app->add(new \Tuupola\Middleware\Cors([
 	'credentials' => false,
 	'cache' => 0
 ]));
-
-$app->run();

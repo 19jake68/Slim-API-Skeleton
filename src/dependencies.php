@@ -3,6 +3,22 @@
 
 $container = $app->getContainer();
 
+$container['errorHandler'] = function($c) {
+	return function($request, $response, $exception) use ($c) {
+		$data = [
+			'code' => $exception->getCode(),
+			'message' => $exception->getMessage(),
+			'file' => $exception->getFile(),
+			'line' => $exception->getLine(),
+			'trace' => explode("\n", $exception->getTraceAsString())
+		];
+		
+		return $c->get('response')->withStatus($response->getStatus())
+								  ->withHeader('Content-Type', 'application/json')
+								  ->write(json_encode($data));
+	};
+};
+
 $container['db'] = function($c) {
 	$settings = $c->get('settings')['db'];
 	$pdo = new PDO(

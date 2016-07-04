@@ -1,6 +1,27 @@
 {
+	"name": "Scoreboard built using Slim 3 Framework",
+	"version": "1.0.0",
+	"type": "app",
+	"description": "REST API using Slim 3 for Phaser Strike Scoreboard app",
+	"keywords": ["scoreboard", "rest", "api", "slim"],
+	"homepage": "https://github.com/19jake68/Slim-API-Skeleton",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Jake Ortega",
+			"email": "jakeniaya@gmail.com",
+			"homepage": "https://19jake68.github.io"
+		}
+	],
     "require": {
         "slim/slim": "^3.4",
-        "tuupola/cors-middleware": "^0.5.1"
-    }
+        "tuupola/cors-middleware": "^0.5.1",
+		"illuminate/database": "^5.2"
+    },
+	"autoload": {
+		"psr-4": {
+			"App\\Controller\\": "src/controllers",
+			"App\\Model\\": "src/models"
+		}
+	}
 }

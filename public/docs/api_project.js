@@ -1,0 +1,15 @@
+define({
+  "name": "[ZLSS] Scoreboard API",
+  "version": "1.0.0",
+  "description": "API Documentation for Scoreboard",
+  "title": "[ZLSS] Scoreboard API Documentation",
+  "url": "http://example.com",
+  "sampleUrl": false,
+  "apidoc": "0.2.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2016-07-04T01:48:27.545Z",
+    "url": "http://apidocjs.com",
+    "version": "0.16.1"
+  }
+});
